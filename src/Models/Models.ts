@@ -7,6 +7,7 @@ export class Quotes {
   auther: Auther
   quote: string;
   id:string;
+  url:string;
 }
 
 export class Auther {

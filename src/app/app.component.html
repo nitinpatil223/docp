@@ -43,7 +43,7 @@
         <div class="card" *ngFor="let data of quotes">
           
 			<div class="image-box">
-				<div class="overlay" style="background-image:linear-gradient(to right, rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.26)), url('assets/bg.jpg')">
+				<div class="overlay" [ngStyle]="{'background-image':'linear-gradient(to right, rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.26)), url('+ data.url +')'}">
 					   <h4 class="card-title">{{data.author.name}} </h4>
 					    <p class="card-text profession"> {{data.author.profession}}</p> 
 						 <span class="topics" *ngFor="let topic of data.topics">

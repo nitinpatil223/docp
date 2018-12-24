@@ -15,9 +15,7 @@ export class AppComponent {
     this.http.get('./assets/quotes.json').subscribe(
       data => {
         this.quotes = data as Array<Quotes>[];	 // FILL THE ARRAY WITH DATA.
-        console.log(this.quotes);
        
-        console.log(this.quotes[1]);
       },
       (err: HttpErrorResponse) => {
         console.log (err.message);
